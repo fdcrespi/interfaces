@@ -9,7 +9,7 @@ cvs.height = height;
 let ctx = cvs.getContext("2d");
 
 // Dibuja rectangulo de color azul 
-ctx.fillStyle = "rgba(0, 0, 255, 0.5)";
+ctx.fillStyle = "rgba(0, 0, 255, 0.1)";
 ctx.fillRect(0, 0, width, height);
 
 // Crea entre 5 y 20 circulos de tamaño y posicion random en cierto tiempo de delay c/u
@@ -17,7 +17,7 @@ for (let i = 0; i < getRandomInt(5,20); i++) {
   setTimeout(() => {
     ctx.beginPath();
     ctx.arc(getRandomInt(0,width), getRandomInt(0,height), getRandomInt(10,50), 0, 2 * Math.PI);
-    ctx.fillStyle = `rgba(${getRandomInt(0,255)}, ${getRandomInt(0,255)}, ${getRandomInt(0,255)}, 1)`;
+    ctx.fillStyle = `rgba(${getRandomInt(0,255)}, ${getRandomInt(0,255)}, ${getRandomInt(0,255)}, ${Math.random()})`;
     ctx.fill();
   }, i * 200);
 }
