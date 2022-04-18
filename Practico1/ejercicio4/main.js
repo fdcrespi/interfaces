@@ -3,39 +3,35 @@
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
 
-let canvasWidth = 600;
-let canvasHeight = 400;
-let imageData = ctx.createImageData(canvasWidth, canvasHeight);
+let width = 600;
+let height = 400;
+let imageData = ctx.createImageData(width, height);
 
-let r = 255;
-let g = 255;
-let b = 255;
+let r = 0;
+let g = 0;
+let b = 0;
 let a = 255;
 
 drawRect(imageData, r, g, b, a);
 ctx.putImageData(imageData, 0, 0);
 
 function drawRect(imageData, r, g, b, a) {
-  let coeficiente = 255 / canvasHeight; /* Nos da el porcentaje en ese momento del color */
-  for (let y = 0; y < canvasHeight; y++) {
-    if (y < height / 2) {
-      r = coeficiente * y;
-      g = coeficiente * y;
-      b = coeficiente * y;
+  let coeficiente = 255 / (width/2);
+  for (let x = 0; x < width; x++) {
+    if (x < width / 2) {
+      r = x * coeficiente;
+      g = x * coeficiente;
     } else {
-      let coeficiente = 255 / canvasHeight;
-      r = (255 - coeficiente) * y;
-      g = (255 - coeficiente) * y;
-      b = (255 - coeficiente) * y;
+      g = 255 - (x - width / 2) * coeficiente;
     }
-    for (let x = 0; x < canvasWidth; x++) {
+    for (let y = 0; y < width; y++) {
       setPixel(imageData, x, y, r, g, b, a);
     } 
   }  
 }
 
 function setPixel(imageData, x, y, r, g, b, a) {
-  let index = (x + y * canvasWidth) * 4;
+  let index = (x + y * width) * 4;
   imageData.data[index + 0] = r;
   imageData.data[index + 1] = g;
   imageData.data[index + 2] = b;
