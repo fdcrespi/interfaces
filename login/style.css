@@ -1,0 +1,94 @@
+@font-face {
+  font-family: ArcadeClassic;
+  src: url(ARCADECLASSIC.TTF);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: ArcadeClassic;
+  background: green;
+  width: 100%;
+  height: 100%;
+}
+
+.pantalla {
+  display: none;
+  font-family: ArcadeClassic;
+  color: #EAAA4B;
+}
+
+.televisor {
+  border: 2px solid black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 200px;
+  background-color: black;
+}
+
+.tv {
+  border-radius: 10px;
+}
+
+.input {
+  font-family: ArcadeClassic;
+  border: 2px solid black;
+  border-radius: 5px;
+  align-items: flex-end;
+}
+
+.input#email {
+  width: 200px;
+}
+
+.formulario{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
+
+.title{
+  text-align: center;
+  color: #EAAA4B;
+}
+
+.icon-right{
+  color: #EAAA4B;
+  margin-right: 5px;
+}
+
+.invisible {
+  visibility: hidden !important;
+}
+
+.btn-submit {
+  background-color: black;
+  font-family: ArcadeClassic;
+  border-radius: 5px;
+  color: #EAAA4B;
+  font-size: 25px;
+  padding: 5px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  background-color: #EAAA4B;
+  color: black;
+}
+
+.container-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
