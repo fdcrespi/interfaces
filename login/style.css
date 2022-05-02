@@ -92,3 +92,39 @@ html, body {
   justify-content: center;
   align-items: center;
 }
+
+.joystick {
+  margin-top: 20px;
+  width: 220px;
+  height: 80px;
+  background-color: #EAAA4B;
+  border: 2px solid darkred;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.arrows, .buttons, .start {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrows, .buttons {
+  opacity: 0.5;
+}  
+
+.btn-start {
+  background-color: black;
+  font-family: ArcadeClassic;
+  border-radius: 10px;
+  border: 2px solid darkred;
+  color: white;
+  font-size: 20px;
+}
+
+.btn-start:hover {
+  background-color: darkred;
+  color: white;
+  cursor: pointer;
+}
