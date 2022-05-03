@@ -32,3 +32,16 @@ inputPass.addEventListener("focus", (e) => {
   }
   iconPass.classList.remove("invisible");
 });
+
+/**
+ * Canvas para cable
+ * */
+let canvas = document.getElementById("canvas");
+let ctx = canvas.getContext("2d");
+let width = canvas.width;
+let height = canvas.height;
+ctx.beginPath();
+ctx.moveTo(50, 0);
+ctx.bezierCurveTo(0, 50, 50, 15, 50, height/2);
+ctx.bezierCurveTo(height/2, 35, 30, 75, 150, height);
+ctx.stroke();
