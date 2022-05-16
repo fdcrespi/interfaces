@@ -22,6 +22,7 @@ function drawRect(imageData, r, g, b, a) {
       r = x * coeficiente;
       g = x * coeficiente;
     } else {
+      // En el if anterior r y g son 255, y para que sea rojo, hay que llevar el g a 0
       g = 255 - (x - width / 2) * coeficiente;
     }
     for (let y = 0; y < width; y++) {
